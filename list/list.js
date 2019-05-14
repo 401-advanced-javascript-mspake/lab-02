@@ -22,8 +22,8 @@ class List {
    * @returns {*}
    */
   pop() {
-    let returnValue = this.data[this.length];
-    delete this.data[this.length];
+    let returnValue = this.data[this.length - 1];
+    delete this.data[this.length - 1];
     this.length--;
     return returnValue;
   }

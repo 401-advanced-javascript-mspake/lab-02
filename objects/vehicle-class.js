@@ -29,7 +29,7 @@ class Motorcycle extends Vehicle {
   }
 
   wheelie() {
-    return 'Wheee!'
+    return 'Wheee!';
   }
 }
 

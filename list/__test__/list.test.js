@@ -39,4 +39,14 @@ describe('List Data Structure', () => {
     expect(prepopulatedStuff().pop()).toEqual('c');
   });
 
+  it('shift removes the first element from the data set', () => {
+    let toShift = prepopulatedStuff();
+    toShift.shift();
+    expect(toShift.length).toEqual(2);
+  });
+
+  it('shift returns the value of the removed element', () => {
+    expect(prepopulatedStuff().shift()).toEqual('a');
+  });
+
 });

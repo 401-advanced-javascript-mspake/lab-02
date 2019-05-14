@@ -1,0 +1,22 @@
+{
+  "name": "lab02",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest ./objects/__tests__/vehicle.test.js --verbose --coverage",
+    "test-watch": "jest --watchAll --verbose --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^22.4.3"
+  },
+  "jest": {
+    "testURL": "http://localhost/"
+  }
+ }

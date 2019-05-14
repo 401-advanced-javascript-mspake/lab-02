@@ -6,7 +6,7 @@ const List = require('../list.js');
 
 describe('List Data Structure', () => {
 
-  it('starts with a length of -1 and an empty data set', () => {
+  it('starts with a length of 0 and an empty data set', () => {
     let stuff = new List();
     expect(stuff.length).toEqual(0);
     expect(stuff.data).toEqual({});

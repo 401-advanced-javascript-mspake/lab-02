@@ -40,6 +40,10 @@ List.prototype.shift = function() {
   return returnValue;
 };
 
+/**
+   * // Add an item to the beginning of the list
+   * @param item
+   */
 List.prototype.unshift = function(newElement) {
   for(let i = this.length; i > 0; i--) {
     this.data[i] = this.data[i - 1];
@@ -48,6 +52,10 @@ List.prototype.unshift = function(newElement) {
   this.length++;
 };
 
+/**
+   * // Run a callback as many times as there are elements in the list
+   * @param {function} callback
+   */
 List.prototype.forEach = function(callback) {
   if(typeof callback === 'function') {
     for (let i = 0; i < this.length; i++) {

@@ -1,5 +1,6 @@
 'use strict';
 
+
 function List() {
   this.length = 0;
   this.data = {};
@@ -45,6 +46,16 @@ List.prototype.unshift = function(newElement) {
   }
   this.data[0] = newElement;
   this.length++;
+};
+
+List.prototype.forEach = function(callback) {
+  if(typeof callback === 'function') {
+    for (let i = 0; i < this.length; i++) {
+      callback(this.data[i]);
+    }
+    return true;
+  }
+  else throw new Error;
 };
 
 module.exports = List;

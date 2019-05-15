@@ -29,13 +29,13 @@ describe('List Data Structure', () => {
     expect(stuff.data[1]).toEqual('b');
   });
 
-  it('pops the last element off the end of the data set', () => {
+  it('pop removes the last element from the end of the data set', () => {
     let toPop = prepopulatedStuff();
     toPop.pop();
     expect(toPop.length).toEqual(2);
   });
 
-  it('poping off an element returns the value of that element', () => {
+  it('pop returns the value of the removed element', () => {
     expect(prepopulatedStuff().pop()).toEqual('c');
   });
 
@@ -43,10 +43,19 @@ describe('List Data Structure', () => {
     let toShift = prepopulatedStuff();
     toShift.shift();
     expect(toShift.length).toEqual(2);
+    expect(toShift.data[0]).toEqual('b');
   });
 
   it('shift returns the value of the removed element', () => {
     expect(prepopulatedStuff().shift()).toEqual('a');
+  });
+
+  it('unshift adds elements to the beginning of the data set', () => {
+    let toUnshift = prepopulatedStuff();
+    toUnshift.unshift('added');
+    expect(toUnshift.data[0]).toEqual('added');
+    expect(toUnshift.data[1]).toEqual('a');
+    expect(toUnshift.length).toEqual(4);
   });
 
 });
